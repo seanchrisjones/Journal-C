@@ -14,36 +14,30 @@ static NSString * const TimestampKey = @"timestamp";
 
 @implementation Entry
 
-- (instancetype)initWithTitle:(NSString *)title text:(NSString *)text timeStamp:(NSDate *)timestamp {
-    
-    self = [super init];
-    if (self) {
-        _title = title;
-        _text = text;
-        _timestamp = timestamp;
-    }
-    return self;
+- (instancetype)initWithTitle:(NSString *)title text:(NSString *)text timeStamp:(NSDate *)timestamp
+{
+	self = [super init];
+	if (self) {
+		_title = title;
+		_text = text;
+		_timestamp = timestamp;
+	}
+	return self;
 }
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    
-    self = [super init];
-    if (self) {
-        _title = dictionary[TitleKey];
-        _text = dictionary[TextKey];
-        _timestamp = dictionary[TimestampKey];
-    }
-    
-    return self;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+	NSString *title = dictionary[TitleKey];
+	NSString *text = dictionary[TextKey];
+	NSDate *timestamp = dictionary[TimestampKey];
+	return [self initWithTitle:title text:text timeStamp:timestamp];
 }
 
-- (NSDictionary *)dictionaryCopy {
-    
-    return @{
-             TitleKey: self.title,
-             TextKey: self.text,
-             TimestampKey: self.timestamp
-             };
+- (NSDictionary *)dictionaryRepresentation
+{
+	return @{TitleKey: self.title,
+			 TextKey: self.text,
+			 TimestampKey: self.timestamp};
 }
 
 @end

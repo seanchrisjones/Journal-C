@@ -51,7 +51,8 @@
 		68F0A13B1C0E12EA0066A452 = {
 			isa = PBXGroup;
 			children = (
-				68F0A1461C0E12EA0066A452 /* Journal-C */,
+				68F0A1461C0E12EA0066A452 /* Sources */,
+				9DDAD7D91D6CB14800C2AEE8 /* Resources */,
 				68F0A1451C0E12EA0066A452 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,25 +65,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		68F0A1461C0E12EA0066A452 /* Journal-C */ = {
+		68F0A1461C0E12EA0066A452 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				68F0A16A1C0E2BBE0066A452 /* EntryListTableViewController.h */,
-				68F0A16B1C0E2BBE0066A452 /* EntryListTableViewController.m */,
-				68F0A16D1C0E2BD60066A452 /* EntryDetailViewController.h */,
-				68F0A16E1C0E2BD60066A452 /* EntryDetailViewController.m */,
 				68F0A14A1C0E12EA0066A452 /* AppDelegate.h */,
 				68F0A14B1C0E12EA0066A452 /* AppDelegate.m */,
-				68F0A1641C0E26E00066A452 /* Entry.h */,
-				68F0A1651C0E26E10066A452 /* Entry.m */,
-				68F0A1671C0E28810066A452 /* EntryController.h */,
-				68F0A1681C0E28810066A452 /* EntryController.m */,
-				68F0A1501C0E12EA0066A452 /* Main.storyboard */,
-				68F0A1531C0E12EA0066A452 /* Assets.xcassets */,
-				68F0A1551C0E12EA0066A452 /* LaunchScreen.storyboard */,
-				68F0A1581C0E12EA0066A452 /* Info.plist */,
+				9DDAD7D81D6CB13F00C2AEE8 /* Model */,
+				9DDAD7D71D6CB13800C2AEE8 /* View Controllers */,
 				68F0A1471C0E12EA0066A452 /* Supporting Files */,
 			);
+			name = Sources;
 			path = "Journal-C";
 			sourceTree = "<group>";
 		};
@@ -92,6 +84,40 @@
 				68F0A1481C0E12EA0066A452 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9DDAD7D71D6CB13800C2AEE8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				68F0A16A1C0E2BBE0066A452 /* EntryListTableViewController.h */,
+				68F0A16B1C0E2BBE0066A452 /* EntryListTableViewController.m */,
+				68F0A16D1C0E2BD60066A452 /* EntryDetailViewController.h */,
+				68F0A16E1C0E2BD60066A452 /* EntryDetailViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9DDAD7D81D6CB13F00C2AEE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				68F0A1641C0E26E00066A452 /* Entry.h */,
+				68F0A1651C0E26E10066A452 /* Entry.m */,
+				68F0A1671C0E28810066A452 /* EntryController.h */,
+				68F0A1681C0E28810066A452 /* EntryController.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9DDAD7D91D6CB14800C2AEE8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				68F0A1501C0E12EA0066A452 /* Main.storyboard */,
+				68F0A1531C0E12EA0066A452 /* Assets.xcassets */,
+				68F0A1551C0E12EA0066A452 /* LaunchScreen.storyboard */,
+				68F0A1581C0E12EA0066A452 /* Info.plist */,
+			);
+			name = Resources;
+			path = "Journal-C";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

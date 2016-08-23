@@ -11,7 +11,7 @@
 
 @interface EntryController : NSObject
 
-@property (strong, nonatomic) NSMutableArray *entries;
+@property (nonatomic, strong) NSMutableArray *entries;
 
 - (void)addEntry:(Entry *)entry;
 - (void)removeEntry:(Entry *)entry;

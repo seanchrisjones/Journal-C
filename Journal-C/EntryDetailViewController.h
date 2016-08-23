@@ -11,6 +11,6 @@
 
 @interface EntryDetailViewController : UIViewController
 
-@property (strong, nonatomic) Entry *entry;
+@property (nonatomic, strong) Entry *entry;
 
 @end

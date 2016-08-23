@@ -10,13 +10,13 @@
 
 @interface Entry : NSObject
 
-@property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSString *text;
-@property (strong, nonatomic) NSDate *timestamp;
-
-@property (strong, nonatomic) NSDictionary *dictionaryCopy;
-
 - (instancetype)initWithTitle:(NSString *)title text:(NSString *)text timeStamp:(NSDate *)timestamp;
+
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (NSDictionary *)dictionaryRepresentation;
+
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *text;
+@property (nonatomic, strong) NSDate *timestamp;
 
 @end
