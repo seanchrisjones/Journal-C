@@ -21,15 +21,14 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	
-	[self updateWithEntry:self.entry];
+
+	[self updateViews];
 }
 
-- (void)updateWithEntry:(Entry *)entry
+- (void)updateViews
 {
-	if (!entry) return;
+	if (!self.entry) return;
 	
-	self.entry = entry;
 	self.titleTextField.text = self.entry.title;
 	self.textTextView.text = self.entry.text;
 }
@@ -38,11 +37,12 @@
 
 - (IBAction)saveButtonTapped:(id)sender
 {
-	
 	if (self.entry) {
+		
 		self.entry.title = self.titleTextField.text;
 		self.entry.text = self.textTextView.text;
 		self.entry.timestamp = [NSDate date];
+		
 	} else {
 		
 		Entry *entry = [[Entry alloc] initWithTitle:self.titleTextField.text text:self.textTextView.text timeStamp:[NSDate date]];
@@ -57,7 +57,6 @@
 
 - (IBAction)clearButtonTapped:(id)sender
 {
-	
 	self.titleTextField.text = @"";
 	self.textTextView.text = @"";
 }
@@ -66,9 +65,18 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-	
 	[textField resignFirstResponder];
 	return YES;
+}
+
+#pragma mark - Properties
+
+- (void)setEntry:(Entry *)entry
+{
+	if (entry != _entry) {
+		_entry = entry;
+		[self updateViews];
+	}
 }
 
 @end
