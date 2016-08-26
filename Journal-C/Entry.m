@@ -40,4 +40,11 @@ static NSString * const TimestampKey = @"timestamp";
 			 TimestampKey: self.timestamp};
 }
 
+- (BOOL)isEqual:(id)object
+{
+	if (![object isKindOfClass:[Entry class]]) { return NO; }
+	// Shortcut to comparing all properties one by one. We let NSDictionary do it for us
+	return [[self dictionaryRepresentation] isEqualToDictionary:[(Entry *)object dictionaryRepresentation]];
+}
+
 @end

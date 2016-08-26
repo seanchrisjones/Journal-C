@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "EntryController.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,14 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     return YES;
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+	[[EntryController sharedController] saveToPersistentStorage];
 }
 
 @end

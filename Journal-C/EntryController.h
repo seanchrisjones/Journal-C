@@ -11,11 +11,12 @@
 
 @interface EntryController : NSObject
 
-@property (nonatomic, strong) NSMutableArray *entries;
-
-- (void)addEntry:(Entry *)entry;
-- (void)removeEntry:(Entry *)entry;
-
 + (EntryController *)sharedController;
+
+- (void)saveToPersistentStorage;
+
+@property (nonatomic, strong, readonly) NSArray *entries;
+- (void)addEntriesObject:(Entry *)entry;
+- (void)removeEntriesObject:(Entry *)entry;
 
 @end

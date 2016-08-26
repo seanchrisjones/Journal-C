@@ -10,6 +10,12 @@
 
 static NSString * const EntriesKey = @"entries";
 
+@interface EntryController ()
+
+@property (nonatomic, strong) NSMutableArray *internalEntries;
+
+@end
+
 @implementation EntryController
 
 + (EntryController *)sharedController
@@ -17,22 +23,19 @@ static NSString * const EntriesKey = @"entries";
 	static EntryController *sharedInstance = nil;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
-		sharedInstance = [EntryController new];
+		sharedInstance = [[EntryController alloc] init];
 		[sharedInstance loadFromPersistentStorage];
 	});
 	return sharedInstance;
 }
 
-- (void)addEntry:(Entry *)entry
+- (instancetype)init
 {
-    [self.entries addObject:entry];
-    [self saveToPersistentStorage];
-}
-
-- (void)removeEntry:(Entry *)entry
-{
-    [self.entries removeObject:entry];
-    [self saveToPersistentStorage];
+	self = [super init];
+	if (self) {
+		_internalEntries = [NSMutableArray array];
+	}
+	return self;
 }
 
 - (void)saveToPersistentStorage
@@ -48,17 +51,25 @@ static NSString * const EntriesKey = @"entries";
 
 - (void)loadFromPersistentStorage
 {
-    NSMutableArray *entries = [NSMutableArray new];
-    
     NSArray *entryDictionaries = [[NSUserDefaults standardUserDefaults] objectForKey:EntriesKey];
-    
     for (NSDictionary *dictionary in entryDictionaries) {
-        
         Entry *entry = [[Entry alloc] initWithDictionary:dictionary];
-        [entries addObject:entry];
+		[self addEntriesObject:entry];
     }
-    
-    self.entries = entries;
+}
+
+#pragma mark - Properties
+
+- (NSArray *)entries { return self.internalEntries; }
+
+- (void)addEntriesObject:(Entry *)entry
+{
+	[self.internalEntries addObject:entry];
+}
+
+- (void)removeEntriesObject:(Entry *)entry
+{
+	[self.internalEntries removeObject:entry];
 }
 
 @end

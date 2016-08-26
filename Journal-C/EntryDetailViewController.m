@@ -47,7 +47,7 @@
 		
 		Entry *entry = [[Entry alloc] initWithTitle:self.titleTextField.text text:self.textTextView.text timeStamp:[NSDate date]];
 		
-		[[EntryController sharedController] addEntry:entry];
+		[[EntryController sharedController] addEntriesObject:entry];
 		
 		self.entry = entry;
 	}
