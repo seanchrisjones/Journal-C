@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EntryController.h"
+#import "DMNEntryController.h"
 
-@interface EntryDetailViewController : UIViewController
+@interface DMNEntryDetailViewController : UIViewController
 
-@property (nonatomic, strong) Entry *entry;
+@property (nonatomic, strong) DMNEntry *entry;
 
 @end

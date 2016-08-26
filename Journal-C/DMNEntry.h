@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Entry : NSObject
+@interface DMNEntry : NSObject
 
 - (instancetype)initWithTitle:(NSString *)title text:(NSString *)text timeStamp:(NSDate *)timestamp;
 

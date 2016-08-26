@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "EntryController.h"
+#import "DMNEntryController.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +22,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-	[[EntryController sharedController] saveToPersistentStorage];
+	[[DMNEntryController sharedController] saveToPersistentStorage];
 }
 
 @end

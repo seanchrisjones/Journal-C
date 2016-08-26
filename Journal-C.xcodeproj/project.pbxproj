@@ -12,10 +12,10 @@
 		68F0A1521C0E12EA0066A452 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F0A1501C0E12EA0066A452 /* Main.storyboard */; };
 		68F0A1541C0E12EA0066A452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68F0A1531C0E12EA0066A452 /* Assets.xcassets */; };
 		68F0A1571C0E12EA0066A452 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F0A1551C0E12EA0066A452 /* LaunchScreen.storyboard */; };
-		68F0A1661C0E26E10066A452 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F0A1651C0E26E10066A452 /* Entry.m */; };
-		68F0A1691C0E28810066A452 /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F0A1681C0E28810066A452 /* EntryController.m */; };
-		68F0A16C1C0E2BBE0066A452 /* EntryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F0A16B1C0E2BBE0066A452 /* EntryListTableViewController.m */; };
-		68F0A16F1C0E2BD60066A452 /* EntryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F0A16E1C0E2BD60066A452 /* EntryDetailViewController.m */; };
+		68F0A1661C0E26E10066A452 /* DMNEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F0A1651C0E26E10066A452 /* DMNEntry.m */; };
+		68F0A1691C0E28810066A452 /* DMNEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F0A1681C0E28810066A452 /* DMNEntryController.m */; };
+		68F0A16C1C0E2BBE0066A452 /* DMNEntryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F0A16B1C0E2BBE0066A452 /* DMNEntryListTableViewController.m */; };
+		68F0A16F1C0E2BD60066A452 /* DMNEntryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F0A16E1C0E2BD60066A452 /* DMNEntryDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,14 +27,14 @@
 		68F0A1531C0E12EA0066A452 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68F0A1561C0E12EA0066A452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68F0A1581C0E12EA0066A452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68F0A1641C0E26E00066A452 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
-		68F0A1651C0E26E10066A452 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
-		68F0A1671C0E28810066A452 /* EntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryController.h; sourceTree = "<group>"; };
-		68F0A1681C0E28810066A452 /* EntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryController.m; sourceTree = "<group>"; };
-		68F0A16A1C0E2BBE0066A452 /* EntryListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryListTableViewController.h; sourceTree = "<group>"; };
-		68F0A16B1C0E2BBE0066A452 /* EntryListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryListTableViewController.m; sourceTree = "<group>"; };
-		68F0A16D1C0E2BD60066A452 /* EntryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryDetailViewController.h; sourceTree = "<group>"; };
-		68F0A16E1C0E2BD60066A452 /* EntryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryDetailViewController.m; sourceTree = "<group>"; };
+		68F0A1641C0E26E00066A452 /* DMNEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNEntry.h; sourceTree = "<group>"; };
+		68F0A1651C0E26E10066A452 /* DMNEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNEntry.m; sourceTree = "<group>"; };
+		68F0A1671C0E28810066A452 /* DMNEntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNEntryController.h; sourceTree = "<group>"; };
+		68F0A1681C0E28810066A452 /* DMNEntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNEntryController.m; sourceTree = "<group>"; };
+		68F0A16A1C0E2BBE0066A452 /* DMNEntryListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNEntryListTableViewController.h; sourceTree = "<group>"; };
+		68F0A16B1C0E2BBE0066A452 /* DMNEntryListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNEntryListTableViewController.m; sourceTree = "<group>"; };
+		68F0A16D1C0E2BD60066A452 /* DMNEntryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNEntryDetailViewController.h; sourceTree = "<group>"; };
+		68F0A16E1C0E2BD60066A452 /* DMNEntryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNEntryDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,10 +89,10 @@
 		9DDAD7D71D6CB13800C2AEE8 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				68F0A16A1C0E2BBE0066A452 /* EntryListTableViewController.h */,
-				68F0A16B1C0E2BBE0066A452 /* EntryListTableViewController.m */,
-				68F0A16D1C0E2BD60066A452 /* EntryDetailViewController.h */,
-				68F0A16E1C0E2BD60066A452 /* EntryDetailViewController.m */,
+				68F0A16A1C0E2BBE0066A452 /* DMNEntryListTableViewController.h */,
+				68F0A16B1C0E2BBE0066A452 /* DMNEntryListTableViewController.m */,
+				68F0A16D1C0E2BD60066A452 /* DMNEntryDetailViewController.h */,
+				68F0A16E1C0E2BD60066A452 /* DMNEntryDetailViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -100,10 +100,10 @@
 		9DDAD7D81D6CB13F00C2AEE8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				68F0A1641C0E26E00066A452 /* Entry.h */,
-				68F0A1651C0E26E10066A452 /* Entry.m */,
-				68F0A1671C0E28810066A452 /* EntryController.h */,
-				68F0A1681C0E28810066A452 /* EntryController.m */,
+				68F0A1641C0E26E00066A452 /* DMNEntry.h */,
+				68F0A1651C0E26E10066A452 /* DMNEntry.m */,
+				68F0A1671C0E28810066A452 /* DMNEntryController.h */,
+				68F0A1681C0E28810066A452 /* DMNEntryController.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -146,6 +146,7 @@
 		68F0A13C1C0E12EA0066A452 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DMN;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = DevMountain;
 				TargetAttributes = {
@@ -190,12 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68F0A16F1C0E2BD60066A452 /* EntryDetailViewController.m in Sources */,
-				68F0A1691C0E28810066A452 /* EntryController.m in Sources */,
-				68F0A1661C0E26E10066A452 /* Entry.m in Sources */,
+				68F0A16F1C0E2BD60066A452 /* DMNEntryDetailViewController.m in Sources */,
+				68F0A1691C0E28810066A452 /* DMNEntryController.m in Sources */,
+				68F0A1661C0E26E10066A452 /* DMNEntry.m in Sources */,
 				68F0A14C1C0E12EA0066A452 /* AppDelegate.m in Sources */,
 				68F0A1491C0E12EA0066A452 /* main.m in Sources */,
-				68F0A16C1C0E2BBE0066A452 /* EntryListTableViewController.m in Sources */,
+				68F0A16C1C0E2BBE0066A452 /* DMNEntryListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

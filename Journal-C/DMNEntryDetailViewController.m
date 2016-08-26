@@ -6,17 +6,17 @@
 //  Copyright © 2015 DevMountain. All rights reserved.
 //
 
-#import "EntryDetailViewController.h"
-#import "EntryController.h"
+#import "DMNEntryDetailViewController.h"
+#import "DMNEntryController.h"
 
-@interface EntryDetailViewController () <UITextFieldDelegate>
+@interface DMNEntryDetailViewController () <UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextField *titleTextField;
 @property (nonatomic, weak) IBOutlet UITextView *textTextView;
 
 @end
 
-@implementation EntryDetailViewController
+@implementation DMNEntryDetailViewController
 
 - (void)viewDidLoad
 {
@@ -45,9 +45,9 @@
 		
 	} else {
 		
-		Entry *entry = [[Entry alloc] initWithTitle:self.titleTextField.text text:self.textTextView.text timeStamp:[NSDate date]];
+		DMNEntry *entry = [[DMNEntry alloc] initWithTitle:self.titleTextField.text text:self.textTextView.text timeStamp:[NSDate date]];
 		
-		[[EntryController sharedController] addEntriesObject:entry];
+		[[DMNEntryController sharedController] addEntriesObject:entry];
 		
 		self.entry = entry;
 	}
@@ -71,7 +71,7 @@
 
 #pragma mark - Properties
 
-- (void)setEntry:(Entry *)entry
+- (void)setEntry:(DMNEntry *)entry
 {
 	if (entry != _entry) {
 		_entry = entry;

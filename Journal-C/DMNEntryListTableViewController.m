@@ -6,15 +6,15 @@
 //  Copyright © 2015 DevMountain. All rights reserved.
 //
 
-#import "EntryListTableViewController.h"
-#import "EntryDetailViewController.h"
-#import "EntryController.h"
+#import "DMNEntryListTableViewController.h"
+#import "DMNEntryDetailViewController.h"
+#import "DMNEntryController.h"
 
-@interface EntryListTableViewController ()
+@interface DMNEntryListTableViewController ()
 
 @end
 
-@implementation EntryListTableViewController
+@implementation DMNEntryListTableViewController
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -27,7 +27,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return [[[EntryController sharedController] entries] count];
+	return [[[DMNEntryController sharedController] entries] count];
 }
 
 
@@ -35,8 +35,8 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"entryCell" forIndexPath:indexPath];
 	
-	EntryController *entryController = [EntryController sharedController];
-    Entry *entry = entryController.entries[indexPath.row];
+	DMNEntryController *entryController = [DMNEntryController sharedController];
+    DMNEntry *entry = entryController.entries[indexPath.row];
     
     cell.textLabel.text = entry.title;
     
@@ -48,12 +48,11 @@
     if ([segue.identifier isEqualToString:@"toViewEntry"]) {
         
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-        Entry *entry = [EntryController sharedController].entries[indexPath.row];
+        DMNEntry *entry = [DMNEntryController sharedController].entries[indexPath.row];
         
-        EntryDetailViewController *detailViewController = segue.destinationViewController;
+        DMNEntryDetailViewController *detailViewController = segue.destinationViewController;
         detailViewController.entry = entry;
     }
-    
 }
 
 @end

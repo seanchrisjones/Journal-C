@@ -6,24 +6,24 @@
 //  Copyright © 2015 DevMountain. All rights reserved.
 //
 
-#import "EntryController.h"
+#import "DMNEntryController.h"
 
 static NSString * const EntriesKey = @"entries";
 
-@interface EntryController ()
+@interface DMNEntryController ()
 
 @property (nonatomic, strong) NSMutableArray *internalEntries;
 
 @end
 
-@implementation EntryController
+@implementation DMNEntryController
 
-+ (EntryController *)sharedController
++ (DMNEntryController *)sharedController
 {
-	static EntryController *sharedInstance = nil;
+	static DMNEntryController *sharedInstance = nil;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
-		sharedInstance = [[EntryController alloc] init];
+		sharedInstance = [[DMNEntryController alloc] init];
 		[sharedInstance loadFromPersistentStorage];
 	});
 	return sharedInstance;
@@ -42,7 +42,7 @@ static NSString * const EntriesKey = @"entries";
 {
     NSMutableArray *entryDictionaries = [NSMutableArray new];
     
-    for (Entry *entry in self.entries) {
+    for (DMNEntry *entry in self.entries) {
         [entryDictionaries addObject:entry.dictionaryRepresentation];
     }
     
@@ -53,7 +53,7 @@ static NSString * const EntriesKey = @"entries";
 {
     NSArray *entryDictionaries = [[NSUserDefaults standardUserDefaults] objectForKey:EntriesKey];
     for (NSDictionary *dictionary in entryDictionaries) {
-        Entry *entry = [[Entry alloc] initWithDictionary:dictionary];
+        DMNEntry *entry = [[DMNEntry alloc] initWithDictionary:dictionary];
 		[self addEntriesObject:entry];
     }
 }
@@ -62,12 +62,12 @@ static NSString * const EntriesKey = @"entries";
 
 - (NSArray *)entries { return self.internalEntries; }
 
-- (void)addEntriesObject:(Entry *)entry
+- (void)addEntriesObject:(DMNEntry *)entry
 {
 	[self.internalEntries addObject:entry];
 }
 
-- (void)removeEntriesObject:(Entry *)entry
+- (void)removeEntriesObject:(DMNEntry *)entry
 {
 	[self.internalEntries removeObject:entry];
 }

@@ -6,13 +6,13 @@
 //  Copyright © 2015 DevMountain. All rights reserved.
 //
 
-#import "Entry.h"
+#import "DMNEntry.h"
 
 static NSString * const TitleKey = @"title";
 static NSString * const TextKey = @"text";
 static NSString * const TimestampKey = @"timestamp";
 
-@implementation Entry
+@implementation DMNEntry
 
 - (instancetype)initWithTitle:(NSString *)title text:(NSString *)text timeStamp:(NSDate *)timestamp
 {
@@ -42,9 +42,9 @@ static NSString * const TimestampKey = @"timestamp";
 
 - (BOOL)isEqual:(id)object
 {
-	if (![object isKindOfClass:[Entry class]]) { return NO; }
+	if (![object isKindOfClass:[DMNEntry class]]) { return NO; }
 	// Shortcut to comparing all properties one by one. We let NSDictionary do it for us
-	return [[self dictionaryRepresentation] isEqualToDictionary:[(Entry *)object dictionaryRepresentation]];
+	return [[self dictionaryRepresentation] isEqualToDictionary:[(DMNEntry *)object dictionaryRepresentation]];
 }
 
 @end

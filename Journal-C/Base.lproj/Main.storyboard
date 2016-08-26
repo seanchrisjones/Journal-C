@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HxN-EF-ziZ">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -9,7 +8,7 @@
         <!--Entry List Table View Controller-->
         <scene sceneID="oJV-MG-Xdr">
             <objects>
-                <tableViewController id="G6x-MA-hYp" customClass="EntryListTableViewController" sceneMemberID="viewController">
+                <tableViewController id="G6x-MA-hYp" customClass="DMNEntryListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xr7-vg-V9Z">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +46,7 @@
         <!--Title-->
         <scene sceneID="51R-tL-w4f">
             <objects>
-                <viewController id="3ov-iL-8wN" customClass="EntryDetailViewController" sceneMemberID="viewController">
+                <viewController id="3ov-iL-8wN" customClass="DMNEntryDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KeY-Ie-WCS"/>
                         <viewControllerLayoutGuide type="bottom" id="CGW-O2-dj5"/>

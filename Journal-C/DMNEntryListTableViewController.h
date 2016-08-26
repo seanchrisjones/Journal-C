@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EntryListTableViewController : UITableViewController
+@interface DMNEntryListTableViewController : UITableViewController
 
 @end

@@ -7,16 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Entry.h"
+#import "DMNEntry.h"
 
-@interface EntryController : NSObject
+@interface DMNEntryController : NSObject
 
-+ (EntryController *)sharedController;
++ (DMNEntryController *)sharedController;
 
 - (void)saveToPersistentStorage;
 
 @property (nonatomic, strong, readonly) NSArray *entries;
-- (void)addEntriesObject:(Entry *)entry;
-- (void)removeEntriesObject:(Entry *)entry;
+- (void)addEntriesObject:(DMNEntry *)entry;
+- (void)removeEntriesObject:(DMNEntry *)entry;
 
 @end
