@@ -158,7 +158,7 @@ There are pros and cons to both approaches. We've opted to go with the latter be
 
 Our EntryController object is the source of truth for entries. We are now adding a layer of persistent storage, so we need to update our EntryController to load entries from NSFilemanager or NSUserDefaults on initialization, and save the entries to Filemanager or NSUserDefaults when they are updated. Choose one of the 2 options. 
 
-### 1. 
+#### 1. NSFileManager
 1. Write a method that returns the local file url from Filemanager. You'll need to build your local file url. This is a similar proccess to Unit 1 persistance. The major difference is that Obj-C does not have Codable. 
 2. Write a save method ```- (void)saveToPersistentStorage``` that will save your rentry object as data to the local file url 
 3. Once your object is saved to the user direcory, you'll need to load it from the same file path. ```- (void)loadFromPersistentStorage```
